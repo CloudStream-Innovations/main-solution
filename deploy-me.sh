@@ -1,6 +1,9 @@
 #!/bin/bash
 
-# BACKEND
+# =============================
+# Part 1
+# S3 BACKEND
+# =============================
 
 # Create a backend.env file if not exist
 # This will track the backend creation
@@ -8,6 +11,12 @@
 if [ ! -f backend.env ]; then
     random=`echo $RANDOM | md5`
     echo "backend="$random > backend.env
+
+    # Add other variables
+    echo "TFSTATE_BUCKET=terraform-state-"$backend >> backend.env
+    echo "TFSTATE_KEY=terraform-state-"$backend >> backend.env
+    echo "TFSTATE_REGION=eu-west-1" >> backend.env
+
 fi
 
 source backend.env
@@ -19,8 +28,19 @@ terraform init
 terraform apply -auto-approve -var="backend=$backend"
 cd ..
 
+# =============================
+# Part 2
 # SOLUTION INFRASTRUCTURE
+# =============================
 
 cd infrastructure
-terraform init
-terraform plan
+
+# Use the S3 backend created in first part
+terraform init \
+    -backend-config="bucket=$TFSTATE_BUCKET" \
+    -backend-config="key=$TFSTATE_KEY" \
+    -backend-config="region=$TFSTATE_REGION"
+
+terraform plan  -out "tfplan"
+
+terraform apply "tfplan"
