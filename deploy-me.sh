@@ -2,4 +2,4 @@
 
 cd terraform-backend
 terraform init
-terraform apply
+terraform apply -auto-approve
