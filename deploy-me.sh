@@ -10,8 +10,6 @@ fi
 
 source backend.env
 
-echo $backend
-
 cd terraform-backend
 terraform init
 terraform apply -auto-approve -var="backend=$backend"
