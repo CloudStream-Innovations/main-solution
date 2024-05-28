@@ -1,3 +1,6 @@
 [submodule "terraform-backend"]
 	path = terraform-backend
 	url = https://github.com/CloudStream-Innovations/terraform-backend.git
+[submodule "infrastructure"]
+	path = infrastructure
+	url = https://github.com/CloudStream-Innovations/infrastructure.git
