@@ -13,6 +13,6 @@
 [submodule "assignment"]
 	path = assignment
 	url = https://github.com/CloudStream-Innovations/assignment.git
-[submodule "main-solution"]
-	path = main-solution
-	url = https://github.com/CloudStream-Innovations/main-solution.git
+[submodule "output-artifacts"]
+	path = output-artifacts
+	url = https://github.com/CloudStream-Innovations/output-artifacts.git
