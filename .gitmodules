@@ -4,6 +4,12 @@
 [submodule "infrastructure"]
 	path = infrastructure
 	url = https://github.com/CloudStream-Innovations/infrastructure.git
-[submodule "dags"]
-	path = dags
-	url = https://github.com/CloudStream-Innovations/dags.git
+[submodule "airflow"]
+	path = airflow
+	url = https://github.com/CloudStream-Innovations/airflow.git
+[submodule "notebooks"]
+	path = notebooks
+	url = https://github.com/CloudStream-Innovations/notebooks.git
+[submodule "assignment"]
+	path = assignment
+	url = https://github.com/CloudStream-Innovations/assignment.git
