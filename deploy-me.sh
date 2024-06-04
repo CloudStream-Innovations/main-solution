@@ -15,7 +15,7 @@ if [ ! -f backend.env ]; then
     # Add other variables
     echo "TFSTATE_BUCKET=terraform-state-"$random >> backend.env
     echo "TFSTATE_KEY=terraform-state-"$random >> backend.env
-    echo "TFSTATE_REGION=eu-west-2" >> backend.env
+    echo "TFSTATE_REGION=eu-west-1" >> backend.env
 
 fi
 
