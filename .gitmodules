@@ -13,3 +13,6 @@
 [submodule "output-artifacts"]
 	path = output-artifacts
 	url = https://github.com/CloudStream-Innovations/output-artifacts.git
+[submodule "infrastructure"]
+	path = infrastructure
+	url = https://github.com/CloudStream-Innovations/infrastructure.git
