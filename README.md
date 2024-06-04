@@ -1,36 +1,36 @@
 # CloudStream Innovations
+CloudStream-Innovations is a fictitious company created for the purpose of providing a POC/Demo to Cameramatics.
 
-CloudStream-Innovations is a fictious company for the purposes of providing a POC / Demo to Cameramatics.
-
-## Reops in this organisation are:
+## Repositories in this Organisation
 
 ### main-solution
-This is the repo that contains the main-solution as it brings in the other repos as sub-modules for deployment.
+This is the repository that contains the main solution, incorporating other repositories as sub-modules for deployment.
 
 ### assignment
-This repo contains artefacts relevant to the original assignment.
+This repository contains artefacts relevant to the original assignment.
 
-## Developement
+## Development Phase
 
 ### notebooks
-This repo contains the notebooks used in this project.  The notebooks show how the data is wrangled with python and how the required reports are put tofether.  There are 7 notebooks.
+This repository contains the notebooks used in this project. The notebooks demonstrate how the data is wrangled with Python and how the required reports are assembled. There are seven notebooks.
 
 ### output-artifacts
-This repository contains the output artifacts of the ETL process using the notebooks. They can be emailed, published, or transferred via FTP using GitHub Actions.  In this case the are pushed to an S3 bucket for static web hosting.
 
-The webpage can be found at this link:  http://cloudstream-innovations-poc-for-demo-of-some-skills.s3-website-eu-west-1.amazonaws.com/#
+This repository contains the output artefacts of the ETL process using the notebooks. They can be emailed, published, or transferred via FTP using GitHub Actions. In this case, they are pushed to an S3 bucket for static web hosting.
 
-## Productionisinig
+The webpage can be found at this link: http://cloudstream-innovations-poc-for-demo-of-some-skills.s3-website-eu-west-1.amazonaws.com/#
 
-The solution is started to be productionised using airflow.  This is not yet complete as DAGs and Airlfow environemnt are quite fincky with regards to dependencies etc and I would need some more time to complete these properly:
+## Productionising
+
+The solution is in the process of being productionised using Airflow. This is not yet complete as DAGs and the Airflow environment have complex dependencies, requiring more time to finalise properly.
 
 ### airflow
-This repo contains the dags for the solution.  Docker compose is used to put together a local environment for developing DAGS and dependency files.
+This repository contains the DAGs for the solution. Docker Compose is used to set up a local environment for developing DAGs and dependency files.
 
 ### infrastructure
-This repo contains the Terraform IaC for this project.   The Terraform code spins up an enviroment in the cloud for deploying an production ready airflow + the DAGs from the airflow folder into the cloud.
+This repository contains the Terraform IaC for this project. The Terraform code sets up an environment in the cloud for deploying a production-ready Airflow along with the DAGs from the airflow repository.
 
-- **NOTE** I encounterd an AWS account level hard restriction which I still need to figure out why it happening.  But it did work on the first deployment.  I may need to create a new AWS account.
+**NOTE:** I encountered an AWS account-level hard restriction which I still need to figure out. It did work on the first deployment. I may need to create a new AWS account.
 
-###terraform-backend
-This repo contains the code for Terraform backend.  this supports the infrastructure repo as it provides an S3 backend for the solution that stores the state.
+### terraform-backend
+This repository contains the code for the Terraform backend. This supports the infrastructure repository by providing an S3 backend for the solution that stores the state.
