@@ -1,5 +1,5 @@
 # CloudStream Innovations
-CloudStream-Innovations is a fictitious company created for the purpose of providing a POC/Demo to Cameramatics.
+CloudStream-Innovations is a fictitious company created for the purpose of providing a POC/Demo.
 
 ## Repositories in this Organisation
 
